@@ -1,6 +1,6 @@
 'use client'
 
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
 
 export default function Page() {
   //NextAuth(Google Provider)を使った0Auth認証(GCPで設定)
