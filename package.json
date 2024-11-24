@@ -14,6 +14,7 @@
     "@fontsource/roboto": "^5.1.0",
     "@mui/icons-material": "^6.1.8",
     "@mui/material": "^6.1.8",
+    "axios": "^1.7.7",
     "ncs-music-app": "file:",
     "next": "15.0.3",
     "next-auth": "^4.24.10",

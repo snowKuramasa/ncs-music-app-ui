@@ -16,7 +16,7 @@ export async function middleware(req: NextRequest) {
   // セッションがない場合はログインページにリダイレクト
   if (!token) {
     const url = req.nextUrl.clone()
-    url.pathname = '/login'
+    url.pathname = '/top'
     return NextResponse.redirect(url)
   }
 
@@ -28,6 +28,7 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     '/', // ダッシュボード関連のパス
+    '/top/:path*', //トップページ関連のパス
     '/profile/:path*', // プロフィール関連のパス
   ],
 }
