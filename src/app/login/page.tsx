@@ -1,6 +1,7 @@
 'use client'
 
 import { signIn, useSession } from 'next-auth/react'
+import Button from '@mui/material/Button'
 
 export default function Page() {
   //NextAuth(Google Provider)を使った0Auth認証(GCPで設定)
@@ -12,7 +13,9 @@ export default function Page() {
       {status !== 'loading' && !session && (
         <div>
           <p>You are not signed in.</p>
-          <button onClick={() => signIn('google')}>Sign in with Google</button>
+          <Button variant='contained' onClick={() => signIn('google')}>
+            LOGIN😎
+          </Button>
         </div>
       )}
     </div>

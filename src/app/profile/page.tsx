@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { signOut, useSession } from 'next-auth/react'
+import Button from '@mui/material/Button'
 
 export default function Page() {
   const { data: session, status } = useSession()
@@ -12,7 +13,9 @@ export default function Page() {
       {status !== 'loading' && session && (
         <div>
           <p>Welcome!! NCS MUSIC App, {session?.user?.name}</p>
-          <button onClick={() => signOut()}>Sign out</button>
+          <Button variant='contained' onClick={() => signOut()}>
+            logout👋
+          </Button>
         </div>
       )}
     </>
