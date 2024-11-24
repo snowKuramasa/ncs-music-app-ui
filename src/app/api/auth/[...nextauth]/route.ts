@@ -21,12 +21,8 @@ const authOptions: NextAuthOptions = {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async redirect({ url, baseUrl }) {
       // ログイン成功後にリダイレクトするURLを指定
-      return '/myPage'
+      return '/profile'
     },
-    // // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    // async signOut({ url }) {
-    //   return '/login' // ログアウト後の遷移先 },
-    // },
   },
 }
 
